@@ -10,7 +10,10 @@ import {Component, Input} from "@angular/core";
         <div>Price: \${{event.price}}</div>
         <event-address [location]="event.location"></event-address>
       </div>
-  `
+  `,
+  styles: [`
+    .well div { color: #bbb; }
+  `]
 })
 export class EventThumbnailComponent {
   @Input() event: any;
