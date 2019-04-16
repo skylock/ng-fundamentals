@@ -3,7 +3,7 @@
   <hr/>
   <div class="row">
     <div class="col-md-5" *ngFor="let event of events">
-      <ngf-event-thumbnail [event]="event"></ngf-event-thumbnail>
+      <ngf-event-thumbnail [event]="event" (click)="handleThumbnailClick(event.name)"></ngf-event-thumbnail>
     </div>
   </div>
 </div>
