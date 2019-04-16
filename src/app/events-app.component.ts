@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'events-app',
+  selector: 'ngf-app',
   template: `
-    <nav-bar></nav-bar>
-    <events-list></events-list>
+    <ngf-nav-bar></ngf-nav-bar>
+    <ngf-events-list></ngf-events-list>
   `
 })
 export class EventsAppComponent {

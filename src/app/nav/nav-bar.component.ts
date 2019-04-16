@@ -1,7 +1,7 @@
-import {Component} from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nav-bar',
+  selector: 'ngf-nav-bar',
   templateUrl: './nav-bar.component.html',
   styles: [`
     .nav.navbar-nav {font-size: 15px;}

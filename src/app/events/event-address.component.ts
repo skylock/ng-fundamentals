@@ -1,7 +1,7 @@
-import {Component, Input} from "@angular/core";
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'event-address',
+  selector: 'ngf-event-address',
   template: `
     <div>
       <span>Location: {{location.address}}</span>
