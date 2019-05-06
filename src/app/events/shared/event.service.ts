@@ -7,7 +7,9 @@ export class EventService {
   }
 
   getEvent(id: number) {
-    return EVENTS.find(event => event.id === id);
+    const result = EVENTS.find(event => event.id === id);
+    console.log('event', result);
+    return result;
   }
 
 }
@@ -20,7 +22,7 @@ const EVENTS = [
     time: '10:00 am',
     price: 599.99,
     imageUrl: '/assets/images/angularconnect-shield.png',
-    onlineUrl: 'http://ng-nl.org',
+    onlineUrl: 'https://www.angularconnect.com',
     sessions: [
       {
         id: 1,

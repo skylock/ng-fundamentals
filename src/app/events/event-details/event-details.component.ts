@@ -15,6 +15,6 @@ export class EventDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.eventService.getEvent(1);
+    this.event = this.eventService.getEvent(1);
   }
 }
