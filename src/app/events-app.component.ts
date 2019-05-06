@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'ngf-app',
   template: `
     <ngf-nav-bar></ngf-nav-bar>
-    <ngf-events-list></ngf-events-list>
+    <router-outlet></router-outlet>
   `
 })
 export class EventsAppComponent {
