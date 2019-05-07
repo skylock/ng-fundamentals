@@ -12,6 +12,7 @@
             "element",
             "ngf",
             "kebab-case"
-        ]
+        ],
+        "ordered-imports": true
     }
 }
