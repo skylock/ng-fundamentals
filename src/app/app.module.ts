@@ -14,7 +14,7 @@ import { EventsListComponent } from './events/events-list.component';
 import { EventService } from './events/shared/event.service';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { appRoutes } from './routes';
-import { EventListResolver } from './events/events-list-resolver.service';
+import { checkDirtyState, EventListResolver } from './events/events-list-resolver.service';
 
 @NgModule({
   imports: [
@@ -44,10 +44,3 @@ import { EventListResolver } from './events/events-list-resolver.service';
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
-
-function checkDirtyState(component: CreateEventComponent) {
-  if (component.isDirty) {
-    return window.confirm('You have not saved this event, do you want to cancel ?');
-  }
-  return  true;
-}

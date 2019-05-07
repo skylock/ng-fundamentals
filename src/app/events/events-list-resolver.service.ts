@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
 import { EventService } from './shared/event.service';
 import { map } from 'rxjs/operators';
+import { CreateEventComponent } from './create-event.component';
 
 @Injectable()
 export class EventListResolver implements Resolve<any> {
@@ -11,4 +12,11 @@ export class EventListResolver implements Resolve<any> {
   resolve() {
     return this.eventService.getEvents().pipe((map(events => events)));
   }
+}
+
+export function checkDirtyState(component: CreateEventComponent) {
+  if (component.isDirty) {
+    return window.confirm('You have not saved this event, do you want to cancel ?');
+  }
+  return  true;
 }
