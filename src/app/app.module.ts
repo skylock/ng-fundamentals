@@ -9,6 +9,7 @@ import { checkDirtyState, CreateEventComponent, EventAddressComponent, EventDeta
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { appRoutes } from './routes';
+import { AuthService } from './user/auth.service';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { appRoutes } from './routes';
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
-    }
+    },
+    AuthService
   ],
   bootstrap: [EventsAppComponent]
 })
